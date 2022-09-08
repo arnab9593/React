@@ -4,7 +4,7 @@ function Chips({ passedData }) {
 
     const [count, setCount] = useState(0);
     const priceChange = (num) => {
-        setCount(count + num)
+        setCount(count + num) 
         passedData(num * 10)
     }
     return (
