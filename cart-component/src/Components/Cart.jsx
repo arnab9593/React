@@ -10,14 +10,17 @@ function Cart() {
     const [Nqty, setNoodleqty] = React.useState(0);
     const [Bqty, setBiriyaniqty] = React.useState(0);
     const [Cqty, setChipsqty] = React.useState(0);
+
+
+
     return (
         <>
             <div>
                 <h3>Noodles</h3>
                 <h3>30</h3>
-                <button disabled={total < 30} onClick={() => { setTotal(total - 30); setNoodleqty(Nqty - 1) }} >-</button>
+                <button disabled={total < 30 && noodles == false} onClick={() => { setTotal(total - 30); setNoodleqty(Nqty - 1) }} >-</button>
                 <h3>{Nqty}</h3>
-                <button onClick={() => { setTotal(total + 30); setNoodleqty(Nqty + 1) }}>+</button>
+                <button onClick={() => { setTotal(total + 30); setNoodleqty(Nqty + 1); setStatus = true }}>+</button>
             </div>
             <div>
                 <h3>Biriyani</h3>
