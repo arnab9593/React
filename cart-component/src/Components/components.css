@@ -1,0 +1,14 @@
+.App {
+    border: 1px solid black;
+    height: 500px;
+    width: 800px;
+    margin: auto auto;
+    margin-top: 40px;
+}
+
+.App div {
+    display: flex;
+    border: 1px solid black;
+    height: 110px;
+    justify-content: space-around;
+}
