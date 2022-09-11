@@ -17,7 +17,7 @@ export default function Todo() {
 
     const handleToggle = (id) => {
         const todosAfterUpdation = todos.map(
-            (todo) => (todo.id === id ? { ...todo, status: !todo.status } : todo)
+            (item) => (item.id === id ? { ...item, status: !item.status } : item)
         );
         setTodos(todosAfterUpdation);
     };
