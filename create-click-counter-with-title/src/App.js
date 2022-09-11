@@ -14,11 +14,12 @@ function App() {
   useEffect(() => {
     document.title = `You clicked ${count} times`
   },);
-  console.log(count);
+  console.log("welcome to React world");
 
   return (
     <div className="App">
       <header className="App-header">
+        <h3>It will display how many times count button has been clicked in the title of the page</h3>
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Count : {count}</h1>
         <button onClick={increment}>Increment</button>
