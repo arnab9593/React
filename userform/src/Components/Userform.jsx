@@ -1,16 +1,18 @@
 
 import { useState, useEffect } from 'react';
+import { useRef } from 'react';
 
 const userData = JSON.parse(localStorage.getItem("formSubData")) || [];
 
 const Userform = () => {
+    const inputRef = useRef(null);
     const [formData, setformData] = useState(userData)
     const [text, setText] = useState({
         name: "",
         email: "",
         gender: "",
         role: "",
-        maritialStatus: "",
+        maritialStatus: false,
         id: Date.now()
     });
 
@@ -32,8 +34,9 @@ const Userform = () => {
             email: "",
             gender: "",
             role: "",
-            maritialStatus: "",
+            maritialStatus: false,
         });
+        inputRef.current.focus();
     };
     console.log(formData);
 
@@ -43,7 +46,7 @@ const Userform = () => {
             <div className='formDiv'>
                 <form onSubmit={formSubmit}>
                     <level> Enter Name : </level>
-                    <input type='text' name='name' value={text.name} onChange={handelForm} placeholder='Enter Your Name'></input> <br></br>
+                    <input type='text' name='name' value={text.name} onChange={handelForm} placeholder='Enter Your Name' ref={inputRef}></input> <br></br>
                     <level> Enter Email : </level>
                     <input type='email' name='email' value={text.email} onChange={handelForm} placeholder='Enter Your Email'></input> <br></br>
                     <level> Select Gender : </level>
