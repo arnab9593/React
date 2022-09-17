@@ -1,0 +1,11 @@
+.light {
+    color: black;
+    background: #cecece;
+    padding: 50px;
+}
+
+.dark {
+    color: white;
+    background: black;
+    padding: 50px;
+}
