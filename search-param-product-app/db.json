@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "name": "SmartPhone",
+            "price": "$30",
+            "image": "https://m.media-amazon.com/images/I/91p5L+GitZL._SL1500_.jpg",
+            "description": "realme collaborated with MediaTek to launch the world's first Dimensity 810 5G Processor. As a next-gen 5G processor, it has both the strength and low power consumption of the 6nm processor. CPU single core performance improves by 16% with a core frequency of up to 2.4GHz, providing an unprecedented powerful experience.",
+            "id": 0
+        },
+        {
+            "name": "Watch",
+            "price": "$20",
+            "image": "https://static.toiimg.com/thumb/msid-78910812,width-1200,height-900,resizemode-4/.jpg",
+            "description": "Get ready to keep a track of your fitness and health stats in style with the boAt Storm Smartwatch. Featuring an elegant design, this smartwatch is sure to be your fitness companion at all times. Its Daily Activity tracker helps you track the number of calories burned, steps taken, and the distance covered with ease, making it a delight to track your journey towards a healthy lifestyle. Moreover, this smartwatch also monitors your sleep, heart rate, blood oxygen levels, and more.",
+            "id": 1
+        },
+        {
+            "name": "Shirt",
+            "price": "50 Rs..",
+            "image": "https://m.media-amazon.com/images/I/81r6jFYrC0L._UL1500_.jpg",
+            "description": "An Amazon brand, Symbol is built on the pillars of quality, reliability and affordability, offering a range of lifestyle essentials that help you look good every day. This Symbol men’s shirt, is woven from cotton blend in a two tone self structure lending it a premium look for special occasions. This full sleeve shirt with semi cut away collar comes in an easy regular fit. Update your look with solid color formal trousers and black leather shoes.",
+            "id": 2
+        },
+        {
+            "name": "Pants",
+            "price": "100 Rs..",
+            "description": "Our chinos give a tailored fit and from solid colours to intricatelyembroidered detailing and statement prints, the entire collection iscrafted for a comfortable feel and durability. The range is bound totake your daily work hustle or leisure weekend with friends andfamily a notch or two higher.",
+            "image": "https://m.media-amazon.com/images/I/51+94nXEL9L._UL1500_.jpg",
+            "id": 3
+        }
+    ]
+}
