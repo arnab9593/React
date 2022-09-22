@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode",
+      "status": false
+    },
+    {
+      "title": "eat",
+      "status": true,
+      "id": 2
+    }
+  ]
+}
