@@ -7,23 +7,28 @@ function Todos() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
+    const [page, setPage] = useState(1)
 
     useEffect(() => {
-        handleGetTodo()
-    });
+        handleGetTodo(page)
+    }, [page]);
 
     //fx to get data
-    function handleGetTodo() {
+    function handleGetTodo(page) {
         // setLoading(true);
         //  setError(false);
-        getTodo().then((res) => {
-            setData(res.data);
-            setLoading(false)
-        }).catch((err) => {
-            console.log(err);
-            setLoading(false);
-            setError(true)
+        getTodo({
+            page: page,
+            limit: 5
         })
+            .then((res) => {
+                setData(res.data);
+                setLoading(false)
+            }).catch((err) => {
+                console.log(err);
+                setLoading(false);
+                setError(true)
+            })
 
     }
 
@@ -51,6 +56,9 @@ function Todos() {
         })
     }
 
+    function handlePageChange(change) {
+        setPage(change + page)
+    }
 
     if (loading) {
         return <h2>Loading...</h2>
@@ -73,7 +81,9 @@ function Todos() {
                     />
                 </div>
             ))}
-
+            <button onClick={() => handlePageChange(- 1)}>Prev</button>
+            <button>{page}</button>
+            <button onClick={() => handlePageChange(+ 1)}>Next</button>
         </div>
     )
 

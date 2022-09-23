@@ -8,8 +8,63 @@
     },
     {
       "title": "eat",
-      "status": true,
+      "status": false,
       "id": 2
+    },
+    {
+      "title": "code",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "run",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "gym",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "chai",
+      "status": false,
+      "id": 6
+    },
+    {
+      "title": "cooking",
+      "status": false,
+      "id": 7
+    },
+    {
+      "title": "reading",
+      "status": false,
+      "id": 8
+    },
+    {
+      "title": "zoom call",
+      "status": false,
+      "id": 9
+    },
+    {
+      "title": "sleep",
+      "status": false,
+      "id": 10
+    },
+    {
+      "title": "dsa",
+      "status": false,
+      "id": 11
+    },
+    {
+      "title": "chakra ui",
+      "status": false,
+      "id": 12
+    },
+    {
+      "title": "react",
+      "status": false,
+      "id": 13
     }
   ]
 }

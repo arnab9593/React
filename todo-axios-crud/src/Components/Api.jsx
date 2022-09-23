@@ -1,7 +1,12 @@
 import axios from "axios";
 
-export function getTodo() {
-    return axios.get(`http://localhost:5000/posts`)
+export function getTodo(params = {}) {
+    return axios.get(`http://localhost:5000/posts`, {
+        params: {
+            _page: params.page,
+            _limit: params.limit
+        }
+    })
 }
 
 export function addTodo({ title, status }) {
