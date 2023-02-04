@@ -23,10 +23,10 @@ function Navbar() {
             <Button>Search</Button>
           </HStack>
           <Link href='/signup'>
-            <Button>Signup</Button>
+            <Button>SignUP</Button>
           </Link>
           <Link href='/signin'>
-            <Button>Signin</Button>
+            <Button>SignIN</Button>
           </Link>
 
         </HStack>
