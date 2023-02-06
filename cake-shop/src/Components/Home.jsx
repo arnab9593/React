@@ -32,7 +32,11 @@ function Home() {
         <>
             <div>
                 {postData && postData.map(item => (
-                    <p key={item.id}>{item.brand}</p>
+                    <div>
+                        <img src={item.img} alt={`${item.name} image not found`}></img>
+                        <p key={item.id}>{item.name}</p>
+                        <p>$ {item.price}</p>
+                    </div>
                 ))}
 
             </div>
