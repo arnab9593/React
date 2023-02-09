@@ -73,9 +73,9 @@ function Home() {
                                     borderRadius='lg'
                                 />
                                 <Stack mt='6' spacing='3'>
-                                    <Heading size='md'>{item.title}</Heading>
+                                    <Heading size='md'>{item.name}</Heading>
                                     <Text color='blue.600' fontSize='2xl'>
-                                        {item.price}
+                                        ${item.price}
                                     </Text>
                                 </Stack>
                                 <Divider />
