@@ -60,7 +60,7 @@ function Home() {
     }
     return (
         <>
-            <SimpleGrid columns={4} spacing={10} padding={10} >
+            <SimpleGrid columns={4} spacing={10} padding={10} position={'absolute'}>
                 {postData?.map(item => (
                     <Card maxW='sm' key={item.id}>
                         <Link to={`/single/${item.id}`}>

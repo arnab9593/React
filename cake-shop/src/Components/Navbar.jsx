@@ -6,7 +6,7 @@ import Search from './Search'
 function Navbar() {
   return (
     <>
-      <Card border={"1px solid black"} w={1400} m={"auto auto"} padding={2}>
+      <Card border={"1px solid black"} w={1400} m={"auto auto"} padding={2} >
         <HStack justifyContent="space-evenly">
           <Link to="/">
             <Image

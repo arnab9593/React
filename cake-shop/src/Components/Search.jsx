@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card, HStack, Input, } from '@chakra-ui/react'
+import { Button, Card, HStack, Input, ListItem, OrderedList, UnorderedList, } from '@chakra-ui/react'
 import axios from 'axios'
-import Home from './Home';
+import { Link } from 'react-router-dom';
 
 function Search() {
 
@@ -31,16 +31,11 @@ function Search() {
                         placeholder='Search...'
                         w={900}
                         onChange={(e) => setSearch(e.target.value)}
-                    // value={post}
                     >
                     </Input>
-
-
-
                     <Button>Search</Button>
-
                 </HStack>
-                <Card border={"1px solid black"}>
+                <Card position={'absolute'} mt={10} w={500}>
                     {loading ? (
                         <p>Loading...</p>
                     ) : (
@@ -53,7 +48,16 @@ function Search() {
                                 )
                             }
                         })
-                            .map((item) => <p key={item.id}>{item.name}</p>)
+                            .map((item) => <UnorderedList>
+                                <ListItem  >
+                                    <Link to={`/single/${item.id}`}
+                                        onClick={() => setSearch("")}
+                                        style={{ textDecoration: "none", color: 'black' }}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                </ListItem>
+                            </UnorderedList>)
 
                     )}
                 </Card>
