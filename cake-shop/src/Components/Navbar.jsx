@@ -1,5 +1,6 @@
-import { Button, Card, HStack, Image, Input, Link } from '@chakra-ui/react'
+import { Button, Card, HStack, Image, Link } from '@chakra-ui/react'
 import React from 'react'
+import Search from './Search'
 
 function Navbar() {
   return (
@@ -14,14 +15,7 @@ function Navbar() {
             >
             </Image>
           </Link>
-          <HStack>
-            <Input
-              placeholder='Search...'
-              w={900}
-            >
-            </Input>
-            <Button>Search</Button>
-          </HStack>
+          <Search />
           <Link href='/signup'>
             <Button>SignUP</Button>
           </Link>
