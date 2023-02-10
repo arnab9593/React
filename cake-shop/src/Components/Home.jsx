@@ -5,6 +5,7 @@ import {
     CardBody,
     CardFooter,
     Divider,
+    Flex,
     Heading,
     Image,
     SimpleGrid,
@@ -43,7 +44,7 @@ function Home() {
                 return res.json();
             })
             .then(res => {
-                console.log(res);
+                // console.log(res);
                 setData(res);
                 setLoading(false);
             })
@@ -58,8 +59,50 @@ function Home() {
     if (loading) {
         return <p>Loading..</p>
     }
+    const lowToHigh = () => {
+        console.log("low to high");
+        fetch(`https://itchy-coveralls-ox.cyclic.app/api/cakes?_sort=price&_order=asc`)
+            .then(res => {
+                return res.json();
+            })
+            .then(res => {
+                console.log(res);
+                setData(res);
+                setLoading(false);
+            })
+            .catch(e => {
+                setLoading(true)
+            })
+    }
+    const highToLow = () => {
+        console.log("high to low");
+        fetch(`https://itchy-coveralls-ox.cyclic.app/api/cakes?_sort=price&_order=desc`)
+            .then(res => {
+                return res.json();
+            })
+            .then(res => {
+                console.log(res);
+                setData(res);
+                setLoading(false);
+            })
+            .catch(e => {
+                setLoading(true)
+            })
+    }
     return (
         <>
+            <Flex
+                w={400}
+                m={"auto auto"}
+                padding={2}
+                border={"1px solid black"}
+                mt={5}
+                justifyContent={"space-around"}
+                borderRadius={5}
+            >
+                <Button onClick={lowToHigh}>Price Low to High</Button>
+                <Button onClick={highToLow}>Price High to Low</Button>
+            </Flex>
             <SimpleGrid columns={4} spacing={10} padding={10} position={'absolute'}>
                 {postData?.map(item => (
                     <Card maxW='sm' key={item.id}>
