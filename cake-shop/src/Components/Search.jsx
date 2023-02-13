@@ -37,7 +37,7 @@ function Search() {
                 </HStack>
                 <Card position={'absolute'} mt={10} w={500}>
                     {loading ? (
-                        <p>Loading...</p>
+                        <></>
                     ) : (
                         post.filter((value, i) => {
                             if (search === "") {
