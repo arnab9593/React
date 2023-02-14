@@ -24,17 +24,22 @@ function Signup() {
 
 
     const submitForm = () => {
-        if (data.password === data.conPassword) {
+        if (data.name.length === 0 || data.email.length === 0 || data.phone.length === 0 || data.password.length === 0 || data.conPassword.length === 0) {
+            alert("Fill all the details");
+            return;
+        }
+        if (data.password !== data.conPassword) {
+            alert("Password Mismatched")
+            setData({
+                name: "", email: "", phone: "", password: "", conPassword: ""
+            })
+            return;
+        } else {
             setFormData([...formData, data]);
             setData({
                 name: "", email: "", phone: "", password: "", conPassword: ""
             })
             alert("Signup Done")
-        } else {
-            alert("Password Mismatched")
-            setData({
-                password: "", conPassword: ""
-            })
         }
 
     }
