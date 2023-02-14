@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card, HStack, Input, ListItem, OrderedList, UnorderedList, } from '@chakra-ui/react'
+import { Button, Card, HStack, Input, ListItem, UnorderedList, } from '@chakra-ui/react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ function Search() {
         }
         getData();
     }, []);
-    console.log(post);
+    // console.log(post);
 
     return (
         <>

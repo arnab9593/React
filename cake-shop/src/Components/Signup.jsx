@@ -1,5 +1,5 @@
 import { Button, Heading, Input, Link, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 
 const signupData = JSON.parse(localStorage.getItem("signupArray")) || [];
@@ -11,21 +11,38 @@ function Signup() {
         name: "", email: "", phone: "", password: "", conPassword: ""
     })
 
+
+
     let name, value;
 
     const handleChange = (e) => {
         name = e.target.name;
         value = e.target.value;
+        console.log(value);
         setData({ ...data, [name]: value })
     }
 
+
     const submitForm = () => {
-        setFormData([...formData, data]);
-        setData({
-            name: "", email: "", phone: "", password: "", conPassword: ""
-        })
+        if (data.password === data.conPassword) {
+            setFormData([...formData, data]);
+            setData({
+                name: "", email: "", phone: "", password: "", conPassword: ""
+            })
+            alert("Signup Done")
+        } else {
+            alert("Password Mismatched")
+            setData({
+                password: "", conPassword: ""
+            })
+        }
+
     }
-    console.log(formData);
+
+    useEffect(() => {
+        localStorage.setItem("signupArray", JSON.stringify(formData));
+    }, [formData])
+
     return (
         <>
             <VStack border={"1px solid black"} borderRadius={"10px"} h={"60vh"} w={"70vh"} m={"auto auto"} mt={10} padding={10}>
